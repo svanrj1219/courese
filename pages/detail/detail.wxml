@@ -1,0 +1,15 @@
+<view class="main">
+    <view class="header">
+        <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
+    </view>
+
+    <view class="content">
+        <view class="item" wx:for="{{logs}}">
+            <view class="left">{{item.remarks}}</view>
+            <view class="right">
+                <view class="jf">+{{item.integration}}</view>
+                <view class="date">{{item.date}}</view>
+            </view>
+        </view>
+    </view>
+</view>

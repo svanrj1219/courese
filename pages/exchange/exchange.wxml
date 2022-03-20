@@ -1,0 +1,30 @@
+<view class="main">
+    <view class="header">
+        <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
+        <view class="name" bindtap="getUserProfile">{{userinfo.nickName||"立即登录"}}</view>
+        <view class="tab">
+            <view class="item" bindtap="task">
+                <image src="../../image/dd.png"></image>
+                <view class="tips">任务</view>
+            </view>
+            <view class="item">
+                <view class="title">{{jf}}</view>
+                <view class="tips">积分</view>
+            </view>
+            <view class="item" bindtap="mall">
+                <image src="../../image/gw.png"></image>
+                <view class="tips">积分商城</view>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="details" bindtap="detail">
+            <image src="../../image/list.png"></image>
+            <view>积分明细</view>
+        </view>
+        <view class="exchange" bindtap="convert">
+            <image src="../../image/coupons.png"></image>
+            <view>兑换明细</view>
+        </view>
+    </view>
+</view>

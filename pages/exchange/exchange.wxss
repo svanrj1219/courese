@@ -1,0 +1,85 @@
+.main {
+    position: relative;
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #d4e7fe;
+    width: 100vw;
+    height: 30vh;
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.avatar {
+    width: 150rpx;
+    height: 150rpx;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.name {
+    color: #fff;
+}
+
+.tab {
+    width: 90vw;
+    height: 12vh;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5vh;
+    left: 33px;
+    border-radius: 7px;
+    box-shadow: 16px 6px 91px -47px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content{
+    width: 51vh;
+    height: 18vh;
+    background-color: #fff;
+    margin-top: 8vh;
+    border-radius: 7px;
+    box-shadow: 16px 6px 91px -47px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.item{
+    text-align: center;
+}
+.item image{
+    width: 40px;
+    height: 40px;
+}
+.title{
+    color: #cc4444;
+    font-size: 23px;
+    font-weight: bold;
+}
+.tips{
+    color: #656565;
+    font-size: 12px;
+}
+.content image{
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+}
+.exchange,.details{
+    font-size: 15px;
+    color: #2962ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

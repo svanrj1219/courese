@@ -1,0 +1,18 @@
+<view class="main">
+    <view class="header">
+        <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
+    </view>
+
+    <view class="content">
+        <view class="item" wx:for="{{mall_log}}" wx:key="id">
+            <view class="left">{{item.name}}</view>
+            <view class="right">
+                <view class="jf">
+                    <text>-{{item.cost_credits}}</text>
+                </view>
+                <view class="date">{{item.date}}</view>
+            </view>
+            <view class="status">{{item.is_exchange?"已兑换":'未兑换'}}</view>
+        </view>
+    </view>
+</view>

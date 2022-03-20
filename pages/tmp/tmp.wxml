@@ -1,0 +1,150 @@
+<view class="main">
+    <view class="content">
+        <view class="fw">
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+            <view class="parallelogram"></view>
+        </view>
+        <view class="time">当前时间: {{time}}
+        </view>
+        <view class="sign">
+            <icon class="icon-box-img" type="success" size="25" color="#fff"></icon><span
+                style="margin-left:8px">签到成功</span>
+        </view>
+        <view class="list">
+            <ul>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">姓名：陈飞飞</view>
+                </view>
+                <view class="infos">
+
+                    <li class="dian"></li>
+                    <view class="info">学号：21110702013</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">性别：男</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">民族：-</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">年级：2021级</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">学院：历史学院</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">专业：世界史</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">班级：21世界史1</view>
+                </view>
+                <view class="infos">
+                    <li class="dian"></li>
+                    <view class="info">宿舍：-</view>
+                </view>
+            </ul>
+        </view>
+        <view class="dt">动态防伪条</view>
+        <view class="x">×</view>
+    </view>
+    <view class="back">
+        返回APP首页
+    </view>
+</view>

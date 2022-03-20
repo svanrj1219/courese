@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/class/class",
+    "pages/exchange/exchange",
+    "pages/task/task",
+    "pages/detail/detail",
+    "pages/malls/malls",
+    "pages/convert/convert",
+    "pages/tmp/tmp"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d4e7fe",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"./image/2-1.png",
+      "selectedIconPath":"./image/3.png",
+      "text": "Today"
+    }, {
+      "pagePath": "pages/class/class",
+      "iconPath":"./image/3-1.png",
+      "selectedIconPath":"./image/2.png",
+      "text": "List"
+    }, {
+      "pagePath": "pages/exchange/exchange",
+      "iconPath":"./image/4-1.png",
+      "selectedIconPath":"./image/4.png",
+      "text": "exchange"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

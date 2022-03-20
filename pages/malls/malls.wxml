@@ -1,0 +1,26 @@
+<!--主盒子-->
+<view class="container">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+        <view class="nav_left_items {{curNav == index+1 ? 'active' : ''}}" bindtap="switchRightTab" data-id="{{index+1}}" wx:for="{{class}}" wx:key="*this">
+            {{item.name}}
+        </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class="nav_right">
+        <view wx:if="{{curNav==index+1}}" class="list" wx:for="{{class}}" wx:key="*this">
+            <view class="nav_right_items" wx:for="{{item.mall}}">
+                <image src="{{item.picture_url}}"></image>
+                <view class="info">
+                    <view class="info_n">
+                        <text>{{item.name}}</text>
+                        <text class="f">{{item.required_points}}分</text>
+                    </view>
+                    <view class="buy" bindtap="buy" data-data="{{item}}">
+                        <image src="../../image/buy.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

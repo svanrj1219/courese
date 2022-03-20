@@ -1,0 +1,27 @@
+<view class="main">
+    <view class="nav">
+        <view class="week {{decId==item.id?'dec':''}}"  wx:for="{{week}}" wx:key="*this" bindtap="clickWeek" data-id="{{item.id}}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="content">
+        <view class="class" wx:for="{{class[decId-1]}}" wx:key="*this">
+                <view class="left">
+                    <view class="time">{{item.time}}</view>
+                    <view class="tips">{{item.per}}</view>
+                </view>
+                <view class="right">
+                    <view class="course">{{item.courseName}}</view>
+                    <view class="class-room">
+                        <icon class="iconfont icon-loc-s"></icon>
+                        {{item.address}}
+                    </view>
+                    <view class="teacher">
+                        <icon class="iconfont icon-ren"></icon>
+                        {{item.teacher}}
+                    </view>
+                </view>
+                <view class="x"></view>
+            </view>
+    </view>
+</view>

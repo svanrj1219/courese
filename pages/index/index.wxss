@@ -1,0 +1,137 @@
+.main{
+  position: relative;
+}
+.header{
+  background-color: #d4e7fe;
+  width: 100vw;
+  height: 18vh;
+  padding: 20rpx;
+}
+.header .title{
+  display: flex;
+}
+h1{
+  font-size: 65rpx;
+  font-weight: bolder;
+  color: #333e88;
+}
+.avatar{
+  width: 85rpx;
+  height: 85rpx;
+  margin-right: 15rpx;
+  border-radius: 35%;
+  box-shadow: 3px 3px 10px #a7cbf6;
+}
+.content{
+  position: absolute;
+  top: 220rpx;
+  background-color: #ffffff;
+  height: 60vh;
+  width: 90vw;
+  border-radius: 30px;
+  padding: 30rpx 40rpx;
+}
+.week{
+  margin-left: 200rpx;
+  color: #495384;
+  font-weight: bold;
+}
+.content .title{
+  color: #545169;
+  font-size: 33rpx;
+  font-weight: bolder;
+}
+.class{
+  margin: 60rpx 0;
+  padding: 30rpx 0;
+  display: flex;
+  background-color: #f9f9fb;
+  border-radius: 15px;
+  position: relative;
+}
+.class .left{
+  padding: 0 15rpx;
+  text-align: center;
+  display: flex;
+  flex:3;
+  flex-direction: column;
+  justify-content: center;
+}
+.class .left .time{
+  font-weight: bolder;
+  font-size: 30rpx;
+  color: #605f74;
+}
+.tips{
+  color: #cdccd1;
+}
+.class .right{
+  flex:7;
+  padding-left: 20rpx;
+}
+.right .course{
+  font-size: 32rpx;
+  font-weight: bolder;
+  padding-left: 6rpx;
+  color: #6969a0;
+  letter-spacing: 10rpx;
+}
+.right .class-room{
+  padding: 6rpx 0;
+  color: #9f9ea1;
+}
+.teacher{
+  color: #9f9ea1;
+}
+.x{
+  position: absolute;
+  left: 200rpx;
+  top: 0;
+  height: 100%;
+  background-color: #eeeef2;
+  width: 1px;
+}
+@font-face {
+  font-family: 'iconfont';  /* Project id 2800770 */
+  src: url('//at.alicdn.com/t/font_2800770_2u7or7s8ws4.woff2?t=1631162099584') format('woff2'),
+  url('//at.alicdn.com/t/font_2800770_2u7or7s8ws4.woff?t=1631162099584') format('woff'),
+  url('//at.alicdn.com/t/font_2800770_2u7or7s8ws4.ttf?t=1631162099584') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ren:before {
+  content: "\e650";
+}
+
+.icon-loc-s:before {
+  content: "\e654";
+}
+.no{
+  width: 100%;
+  height: 100%;
+  font-size: 36rpx;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 250rpx;
+}
+.footer button{
+  color: #333e88;
+  font-size: 30rpx;
+  background: transparent;
+}

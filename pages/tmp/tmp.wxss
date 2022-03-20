@@ -1,0 +1,107 @@
+/* pages/tmp/tmp.wxss */
+page {
+    background: #919392;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    background-color: #329afb;
+    display: flex;
+    flex-direction: column;
+    width: 600rpx;
+    overflow: hidden;
+    height: 660rpx;
+    border-radius: 10px;
+    position: relative;
+    color: #ffffff;
+}
+.fw{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 2000%;
+    animation:rolling 40s linear infinite;
+}
+@keyframes rolling {
+    from {
+        transform: translateX(-40%);
+    }
+
+    to {
+        transform: translateX(10%);
+    }
+}
+.parallelogram {
+    width: 60px;
+    height: 16px;
+    transform: skew(-40deg);
+    background-color: yellow;
+    margin-left: 32px;
+}
+.time{
+    margin: 0 auto;
+    margin-top: 50rpx;
+    font-size: 13px;
+    display: flex;
+}
+.sign{
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+.list{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.info{
+    margin: 8rpx 0;
+}
+.dian{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+}
+.infos{
+    align-items: center;
+    display: flex;
+}
+.sign{
+    display: flex;
+
+}
+.back{
+    font-size: 13px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 20px;
+}
+.dt{
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    margin-left: -40px;
+    border-radius: 20px;
+    padding: 1rpx 20rpx;
+    font-size: 12px;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+.x{
+    color: #fff;
+    font-size: 70rpx;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+}
