@@ -5,7 +5,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-        mall_log: []
+        mall_log: [],
+        page: 1,
+        size: 10,
+        logNull: true
     },
 
     /**
@@ -21,7 +24,62 @@ Page({
     onReady: function () {
 
     },
-
+    getLogs() {
+        if (!this.data.logNull) {
+            wx.showToast({
+                title: '暂无更多数据',
+                icon: 'none',
+                duration: 2000
+            })
+            return
+        }
+        wx.showLoading({
+            title: '加载中',
+        })
+        let newLogs = this.data.mall_log
+        this.setData({
+            page: ++this.data.page
+        })
+        var that = this
+        wx.getStorage({
+            key: 'id',
+            success(res) {
+                wx.vrequest({
+                    url: 'http://1.15.144.204:8080/getDetails',
+                    header: {
+                        'content-type': 'application/json' // 默认值
+                    },
+                    method: "POST",
+                    data: {
+                        uid: res.data,
+                        page: that.data.page,
+                        size: that.data.size
+                    },
+                    success(resp) {
+                        var data = JSON.parse(resp.data).data
+                        .data.forEach(e => {
+                            newLogs.push(e)
+                        });
+                        if (data.length==0) {
+                            that.setData({
+                                mall_log: newLogs,
+                                logNull: false
+                            })
+                            wx.showToast({
+                                title: '暂无更多数据',
+                                icon: 'none',
+                                duration: 2000
+                            })
+                        }
+                        that.setData({
+                            mall_log: newLogs,
+                        })
+                        wx.hideLoading()
+                    }
+                })
+            },
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
@@ -48,11 +106,18 @@ Page({
                     },
                     method: "POST",
                     data: {
-                        id: res.data
+                        id: res.data,
+                        page: that.data.page,
+                        size: that.data.size
                     },
                     success(resp) {
                         var data = JSON.parse(resp.data).data
-
+                        if (data.length == 0) {
+                            that.setData({
+                                mall_log: data,
+                                logNull: false
+                            })
+                        }
                         that.setData({
                             mall_log: data
                         })

@@ -6,7 +6,7 @@ Page({
    */
   data: {
     time: "",
-    show:false
+    show: false
   },
 
   wish: function () {
@@ -26,16 +26,19 @@ Page({
       var h = myDate.getHours(); //获取当前小时数(0-23)
       var mm = myDate.getMinutes(); //获取当前分钟数(0-59)
       var s = myDate.getSeconds();
-      if(s<=9){
-        s='0'+s
+      if (s <= 9) {
+        s = '0' + s
       }
+      m += 1
+      if (m <= 9)
+        m = '0' + m
       var date = y + "-" + m + "-" + d + " " + h + ":" + mm + ":" + s
       this.setData({
         time: date
       })
     }, 100);
   },
-
+  //自定义导航栏标题
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

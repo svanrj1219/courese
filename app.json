@@ -1,13 +1,13 @@
 {
   "pages":[
+    "pages/tmp/tmp",
     "pages/index/index",
     "pages/class/class",
     "pages/exchange/exchange",
     "pages/task/task",
     "pages/detail/detail",
     "pages/malls/malls",
-    "pages/convert/convert",
-    "pages/tmp/tmp"
+    "pages/convert/convert"
   ],
   "window":{
     "backgroundTextStyle":"light",

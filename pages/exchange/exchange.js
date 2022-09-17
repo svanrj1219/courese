@@ -139,7 +139,7 @@ Page({
             url: '../task/task',
         })
     },
-    detail() {
+    detail(e) {
         wx.navigateTo({
             url: '../detail/detail',
         })
@@ -151,7 +151,7 @@ Page({
     },
     mall() {
         wx.navigateTo({
-            url: '../malls/malls',
+            url: '/pages/malls/malls',
         })
     },
 

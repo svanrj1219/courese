@@ -3,7 +3,7 @@
         <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
     </view>
 
-    <view class="content">
+    <scroll-view  class="content" bindscrolltolower="getLogs" scroll-y="true">
         <view class="item" wx:for="{{mall_log}}" wx:key="id">
             <view class="left">{{item.name}}</view>
             <view class="right">
@@ -14,5 +14,5 @@
             </view>
             <view class="status">{{item.is_exchange?"已兑换":'未兑换'}}</view>
         </view>
-    </view>
+    </scroll-view >
 </view>

@@ -5,14 +5,16 @@ Page({
      * 页面的初始数据
      */
     data: {
-        logs: []
+        logs: [],
+        page: 1,
+        size: 10,
+        logNull: true
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
     },
 
     /**
@@ -21,11 +23,68 @@ Page({
     onReady: function () {
 
     },
-
+    getLogs() {
+        if (!this.data.logNull) {
+            wx.showToast({
+                title: '暂无更多数据',
+                icon: 'none',
+                duration: 2000
+            })
+            return
+        }
+        wx.showLoading({
+            title: '加载中',
+        })
+        let newLogs = this.data.logs
+        this.setData({
+            page: ++this.data.page
+        })
+        var that = this
+        wx.getStorage({
+            key: 'id',
+            success(res) {
+                wx.vrequest({
+                    url: 'http://1.15.144.204:8080/getLog',
+                    header: {
+                        'content-type': 'application/json' // 默认值
+                    },
+                    method: "POST",
+                    data: {
+                        uid: res.data,
+                        page: that.data.page,
+                        size: that.data.size
+                    },
+                    success(resp) {
+                        var data = JSON.parse(resp.data).data
+                        data.forEach(e => {
+                            newLogs.push(e)
+                        });
+                        if (data.length == 0) {
+                            that.setData({
+                                logNull: false
+                            })
+                            wx.showToast({
+                                title: '暂无更多数据',
+                                icon: 'none',
+                                duration: 2000
+                            })
+                        }
+                        that.setData({
+                            logs: newLogs,
+                        })
+                        wx.hideLoading()
+                    }
+                })
+            },
+        })
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        this.setData({
+            logNull: true
+        })
         var that = this;
         wx.getStorage({
             key: 'userinfo',
@@ -39,9 +98,6 @@ Page({
         wx.getStorage({
             key: 'id',
             success(res) {
-                that.setData({
-                    isLogin: false
-                })
                 wx.vrequest({
                     url: 'http://1.15.144.204:8080/getLog',
                     header: {
@@ -49,10 +105,18 @@ Page({
                     },
                     method: "POST",
                     data: {
-                        uid: res.data
+                        uid: res.data,
+                        page: that.data.page,
+                        size: that.data.size
                     },
                     success(resp) {
                         var data = JSON.parse(resp.data).data
+                        if (data.length == 0) {
+                            that.setData({
+                                logs: data,
+                                logNull: false
+                            })
+                        }
                         that.setData({
                             logs: data
                         })

@@ -1,9 +1,9 @@
-<view class="main">
+<view class="main" >
     <view class="header">
         <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
     </view>
 
-    <view class="content">
+    <scroll-view class="content" bindscrolltolower="getLogs" scroll-y="true">
         <view class="item" wx:for="{{logs}}">
             <view class="left">{{item.remarks}}</view>
             <view class="right">
@@ -11,5 +11,5 @@
                 <view class="date">{{item.date}}</view>
             </view>
         </view>
-    </view>
+    </scroll-view>
 </view>
